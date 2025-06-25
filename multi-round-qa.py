@@ -11,6 +11,8 @@ import pandas as pd
 
 from utils import AsyncLoopWrapper, init_logger
 
+import local_tiktoken
+
 logger = init_logger(__name__, logging.INFO)
 
 
@@ -122,21 +124,37 @@ class RequestExecutor:
         self.loop = AsyncLoopWrapper.GetOrStartLoop()
         self.request_history = []
         self.log_file = open("requests.jsonl", "w", encoding="utf-8")
+        # 使用本地tiktoken加载器获取编码器
+        self.enc = local_tiktoken.get_encoding("cl100k_base")
+
+
+
 
     async def _async_launch_request(self, messages, max_tokens, extra_headers=None):
         start_time = time.time()
-        
-        # 记录请求信息
-        log_entry = {
-            "timestamp": start_time,
-            "user_id": extra_headers.get("x-user-id", "unknown") if extra_headers else "unknown",
-            "messages": messages
-        }
-        self.log_file.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
-        self.log_file.flush()
-
         first_token_time = None
         words = ""
+
+
+
+        if extra_headers is not None:
+            # 计算 KV cache tokens (历史消息) 和新计算的 tokens (最新消息)
+            kv_cache_tokens = 0
+            for text in messages[:-1]:  # 除了最后一条消息外的所有历史消息
+                kv_cache_tokens += len(self.enc.encode(text["content"]))
+
+            # 最新消息需要计算的tokens
+            new_tokens = len(self.enc.encode(messages[-1]["content"]))
+            
+            log_entry = {
+                "timestamp": start_time,
+                "user_id": extra_headers.get("x-user-id", "unknown"),
+                "kv_cache_tokens": kv_cache_tokens,
+                "new_tokens": new_tokens,
+                "messages": messages
+            }
+            self.log_file.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
+            self.log_file.flush()
 
         response = await self.client.chat.completions.create(
             messages=messages,
