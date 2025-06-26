@@ -267,6 +267,13 @@ class UserSession:
 
     def _launch_new_request(self, timestamp: float, request_executor: RequestExecutor):
         if self.use_sharegpt:
+            # 确保不超出实际对话轮数
+            max_question_id = (len(self.sharegpt_data["conversations"]) // 2) - 1
+            if self.question_id > max_question_id:
+                # 如果已经到达最大轮数，标记为完成并返回
+                self.finished = True
+                return
+                
             if self.start_with_gpt:
                 prompt = self.sharegpt_data["conversations"][2 * self.question_id + 1][
                     "value"
@@ -278,6 +285,7 @@ class UserSession:
             self.question_id += 1
         else:
             prompt = self._build_new_question()
+            
         if len(self.chat_history) == 0:
             prompt = self._build_system_prompt() + prompt
         self.chat_history.on_user_query(prompt)
@@ -286,13 +294,21 @@ class UserSession:
         )
         if self.use_sharegpt:
             if self.start_with_gpt:
-                max_tokens = self.sharegpt_data["conversations"][2 * self.question_id][
-                    "num_tokens"
-                ]
+                # 确保索引不超出范围
+                if 2 * (self.question_id - 1) + 2 < len(self.sharegpt_data["conversations"]):
+                    max_tokens = self.sharegpt_data["conversations"][2 * (self.question_id - 1) + 2][
+                        "num_tokens"
+                    ]
+                else:
+                    max_tokens = self.user_config.answer_len
             else:
-                max_tokens = self.sharegpt_data["conversations"][
-                    2 * self.question_id - 1
-                ]["num_tokens"]
+                # 确保索引不超出范围
+                if 2 * (self.question_id - 1) + 1 < len(self.sharegpt_data["conversations"]):
+                    max_tokens = self.sharegpt_data["conversations"][
+                        2 * (self.question_id - 1) + 1
+                    ]["num_tokens"]
+                else:
+                    max_tokens = self.user_config.answer_len
             max_tokens = min(max_tokens, self.user_config.answer_len)
         else:
             max_tokens = self.user_config.answer_len
@@ -379,17 +395,21 @@ class UserSessionManager:
         self.workload_config = workload_config
         self.sessions = []
 
-        gap_between_requests_per_user = workload_config.num_users / workload_config.qps
-        session_alive_time = gap_between_requests_per_user * (
+        # 基础请求间隔（由整体QPS和用户数决定）
+        self.base_gap_between_requests_per_user = workload_config.num_users / workload_config.qps
+        # 当使用ShareGPT时，每个用户可能有不同的对话轮数，所以session_alive_time会根据实际情况动态计算
+        # 这里只计算基于num_rounds的默认值
+        self.default_session_alive_time = self.base_gap_between_requests_per_user * (
             workload_config.num_rounds - 1
         )
-        self.gap_between_users = session_alive_time / (workload_config.num_users + 0)
+        # 用户创建间隔仍然基于默认的session_alive_time
+        self.gap_between_users = self.default_session_alive_time / (workload_config.num_users + 0)
         self.ramp_up_time = workload_config.num_users * self.gap_between_users
 
         logger.info(
             f"Gap between users: {self.gap_between_users} secs.\n"
-            f"Gap between user reqs: {gap_between_requests_per_user} secs.\n"
-            f"Expected length of user session: {session_alive_time} secs."
+            f"Base gap between user reqs: {self.base_gap_between_requests_per_user} secs.\n"
+            f"Default expected length of user session: {self.default_session_alive_time} secs."
         )
 
         self.user_id = init_user_id
@@ -406,12 +426,7 @@ class UserSessionManager:
     def _load_sharegpt_data(self):
         with open("ShareGPT.json", "r", encoding="utf-8") as file:
             self.sharegpt_data = json.load(file)
-        self.sharegpt_data = [
-            d
-            for d in self.sharegpt_data
-            if d["num_round"] > 2 * self.workload_config.num_rounds
-        ]
-        logger.info(f"There are {len(self.sharegpt_data)} users satisfying ")
+        logger.info(f"Loaded {len(self.sharegpt_data)} users from ShareGPT data")
 
     def _ramp_up(self, timestamp: float, ramp_up_time: float):
         for i in range(self.workload_config.num_users):
@@ -426,8 +441,12 @@ class UserSessionManager:
         self.user_id += 1
         user_config = UserConfig.new_user_config(self.user_id, self.workload_config)
         if self.use_sharegpt:
+            data_idx = self.user_id % len(self.sharegpt_data)
+            sharegpt_data = self.sharegpt_data[data_idx]
+            actual_rounds = max(sharegpt_data["num_round"] // 2, self.workload_config.num_rounds)
+            user_config.num_rounds = actual_rounds
             user_session = UserSession(
-                user_config, self.use_sharegpt, self.sharegpt_data[self.user_id]
+                user_config, self.use_sharegpt, sharegpt_data
             )
         else:
             user_session = UserSession(user_config, self.use_sharegpt)
