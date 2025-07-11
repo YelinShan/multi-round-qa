@@ -1,0 +1,36 @@
+[1m[2025-07-08 10:59:22,939] DEBUG:[0m Starting the asyncio loop [3m(utils.py:90:AsyncLoopWrapper)[0m
+[32;20m[2025-07-08 10:59:23,195] INFO:[0m Warming up the engine [3m(multi-round-qa.py:587:__main__)[0m
+[32;20m[2025-07-08 10:59:23,412] INFO:[0m Waiting for 10 tasks to finish [3m(utils.py:67:AsyncLoopWrapper)[0m
+[32;20m[2025-07-08 11:00:19,454] INFO:[0m Gap between users: 0.004 secs.
+Base gap between user reqs: 0.03 secs.
+Default expected length of user session: 0.12 secs. [3m(multi-round-qa.py:409:__main__)[0m
+已成功修补tiktoken加载过程，将使用本地文件
+Traceback (most recent call last):
+  File "/home/yshan/Programs/vllm/benchmarks/multi-round-qa/multi-round-qa.py", line 763, in <module>
+    main()
+  File "/home/yshan/Programs/vllm/benchmarks/multi-round-qa/multi-round-qa.py", line 732, in main
+    manager = UserSessionManager(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/yshan/Programs/vllm/benchmarks/multi-round-qa/multi-round-qa.py", line 424, in __init__
+    self._load_sharegpt_data()
+  File "/home/yshan/Programs/vllm/benchmarks/multi-round-qa/multi-round-qa.py", line 428, in _load_sharegpt_data
+    self.sharegpt_data = json.load(file)
+                         ^^^^^^^^^^^^^^^
+  File "/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/threading.py'>
+Traceback (most recent call last):
+  File "/home/yshan/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/threading.py", line 1624, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 

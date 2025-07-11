@@ -1,0 +1,260 @@
+[1m[2025-07-10 19:43:57,789] DEBUG:[0m Starting the asyncio loop [3m(utils.py:90:AsyncLoopWrapper)[0m
+[32;20m[2025-07-10 19:43:57,942] INFO:[0m Warming up the engine [3m(multi-round-qa.py:588:__main__)[0m
+[32;20m[2025-07-10 19:43:58,097] INFO:[0m Waiting for 10 tasks to finish [3m(utils.py:67:AsyncLoopWrapper)[0m
+[32;20m[2025-07-10 19:43:58,622] INFO:[0m Gap between users: 0.00019999999999999998 secs.
+Base gap between user reqs: 0.0003 secs.
+Default expected length of user session: 0.0006 secs. [3m(multi-round-qa.py:410:__main__)[0m
+[32;20m[2025-07-10 19:44:09,080] INFO:[0m Loaded 94141 users from ShareGPT data [3m(multi-round-qa.py:430:__main__)[0m
+[32;20m[2025-07-10 19:44:09,080] INFO:[0m Joined a new user 4, now active users: 4 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:09,080] INFO:[0m Removing 1 finished sessions, now active users: 3 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:09,188] INFO:[0m Joined a new user 5, now active users: 4 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:09,189] INFO:[0m Removing 1 finished sessions, now active users: 3 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:09,292] INFO:[0m Joined a new user 6, now active users: 4 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:09,292] WARNING:[0m User 3 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[33;20m[2025-07-10 19:44:09,292] WARNING:[0m User 4 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:09,393] INFO:[0m Joined a new user 7, now active users: 5 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:09,393] WARNING:[0m User 5 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[33;20m[2025-07-10 19:44:09,394] WARNING:[0m User 6 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:09,494] INFO:[0m Joined a new user 8, now active users: 6 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:09,495] WARNING:[0m User 7 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:09,595] INFO:[0m Joined a new user 9, now active users: 7 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:09,695] INFO:[0m Joined a new user 10, now active users: 8 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:09,696] INFO:[0m Removing 1 finished sessions, now active users: 7 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:09,800] INFO:[0m Joined a new user 11, now active users: 8 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:09,800] WARNING:[0m User 9 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[33;20m[2025-07-10 19:44:09,800] WARNING:[0m User 10 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:09,800] INFO:[0m Removing 2 finished sessions, now active users: 6 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:09,906] INFO:[0m Joined a new user 12, now active users: 7 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:09,906] WARNING:[0m User 11 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,007] INFO:[0m Joined a new user 13, now active users: 8 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,007] WARNING:[0m User 12 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,107] INFO:[0m Joined a new user 14, now active users: 9 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,107] WARNING:[0m User 13 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,209] INFO:[0m Joined a new user 15, now active users: 10 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,210] WARNING:[0m User 14 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,310] INFO:[0m Joined a new user 16, now active users: 11 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,310] WARNING:[0m User 15 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,411] INFO:[0m Joined a new user 17, now active users: 12 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,411] WARNING:[0m User 16 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,411] INFO:[0m Removing 1 finished sessions, now active users: 11 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:10,514] INFO:[0m Joined a new user 18, now active users: 12 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,515] WARNING:[0m User 17 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,616] INFO:[0m Joined a new user 19, now active users: 13 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,616] WARNING:[0m User 18 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,718] INFO:[0m Joined a new user 20, now active users: 14 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,718] WARNING:[0m User 19 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,818] INFO:[0m Joined a new user 21, now active users: 15 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,818] WARNING:[0m User 20 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:10,921] INFO:[0m Joined a new user 22, now active users: 16 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:10,922] WARNING:[0m User 21 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,024] INFO:[0m Joined a new user 23, now active users: 17 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,025] WARNING:[0m User 22 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,127] INFO:[0m Joined a new user 24, now active users: 18 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,127] WARNING:[0m User 23 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,228] INFO:[0m Joined a new user 25, now active users: 19 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:11,228] INFO:[0m Removing 1 finished sessions, now active users: 18 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:11,332] INFO:[0m Joined a new user 26, now active users: 19 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,333] WARNING:[0m User 25 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,434] INFO:[0m Joined a new user 27, now active users: 20 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,434] WARNING:[0m User 26 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,534] INFO:[0m Joined a new user 28, now active users: 21 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,534] WARNING:[0m User 27 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,635] INFO:[0m Joined a new user 29, now active users: 22 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,635] WARNING:[0m User 28 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,747] INFO:[0m Joined a new user 30, now active users: 23 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,747] WARNING:[0m User 29 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,748] INFO:[0m Removing 1 finished sessions, now active users: 22 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:11,852] INFO:[0m Joined a new user 31, now active users: 23 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,852] WARNING:[0m User 30 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:11,952] INFO:[0m Joined a new user 32, now active users: 24 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:11,952] WARNING:[0m User 31 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,055] INFO:[0m Joined a new user 33, now active users: 25 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,055] WARNING:[0m User 32 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,155] INFO:[0m Joined a new user 34, now active users: 26 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,155] WARNING:[0m User 33 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,255] INFO:[0m Joined a new user 35, now active users: 27 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,256] WARNING:[0m User 34 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,356] INFO:[0m Joined a new user 36, now active users: 28 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,356] WARNING:[0m User 35 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,356] INFO:[0m Removing 1 finished sessions, now active users: 27 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:12,464] INFO:[0m Joined a new user 37, now active users: 28 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,464] WARNING:[0m User 36 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,566] INFO:[0m Joined a new user 38, now active users: 29 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,567] WARNING:[0m User 37 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,568] INFO:[0m Removing 1 finished sessions, now active users: 28 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:12,671] INFO:[0m Joined a new user 39, now active users: 29 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,672] WARNING:[0m User 38 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,675] INFO:[0m Removing 1 finished sessions, now active users: 28 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:12,778] INFO:[0m Joined a new user 40, now active users: 29 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,779] WARNING:[0m User 39 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,879] INFO:[0m Joined a new user 41, now active users: 30 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,879] WARNING:[0m User 40 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:12,879] INFO:[0m Removing 1 finished sessions, now active users: 29 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:12,983] INFO:[0m Joined a new user 42, now active users: 30 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:12,984] WARNING:[0m User 41 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,085] INFO:[0m Joined a new user 43, now active users: 31 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,087] WARNING:[0m User 42 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,087] INFO:[0m Removing 1 finished sessions, now active users: 30 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:13,191] INFO:[0m Joined a new user 44, now active users: 31 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,192] WARNING:[0m User 43 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,293] INFO:[0m Joined a new user 45, now active users: 32 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,294] WARNING:[0m User 44 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,398] INFO:[0m Joined a new user 46, now active users: 33 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,399] WARNING:[0m User 45 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,399] INFO:[0m Removing 2 finished sessions, now active users: 31 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:13,503] INFO:[0m Joined a new user 47, now active users: 32 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,506] WARNING:[0m User 46 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,507] INFO:[0m Removing 1 finished sessions, now active users: 31 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:13,611] INFO:[0m Joined a new user 48, now active users: 32 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,615] WARNING:[0m User 47 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,717] INFO:[0m Joined a new user 49, now active users: 33 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,719] WARNING:[0m User 48 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,824] INFO:[0m Joined a new user 50, now active users: 34 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,824] WARNING:[0m User 49 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,824] INFO:[0m Removing 1 finished sessions, now active users: 33 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:13,927] INFO:[0m Joined a new user 51, now active users: 34 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:13,929] WARNING:[0m User 50 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:13,931] INFO:[0m Removing 2 finished sessions, now active users: 32 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:14,035] INFO:[0m Joined a new user 52, now active users: 33 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,036] WARNING:[0m User 51 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,136] INFO:[0m Joined a new user 53, now active users: 34 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,140] WARNING:[0m User 52 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,240] INFO:[0m Joined a new user 54, now active users: 35 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,244] WARNING:[0m User 53 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,346] INFO:[0m Joined a new user 55, now active users: 36 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,350] WARNING:[0m User 54 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,351] INFO:[0m Removing 1 finished sessions, now active users: 35 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:14,454] INFO:[0m Joined a new user 56, now active users: 36 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,456] WARNING:[0m User 55 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,559] INFO:[0m Joined a new user 57, now active users: 37 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,560] WARNING:[0m User 56 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,560] INFO:[0m Removing 1 finished sessions, now active users: 36 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:14,663] INFO:[0m Joined a new user 58, now active users: 37 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,663] WARNING:[0m User 57 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,764] INFO:[0m Joined a new user 59, now active users: 38 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,764] WARNING:[0m User 58 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,864] INFO:[0m Joined a new user 60, now active users: 39 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,864] WARNING:[0m User 59 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:14,965] INFO:[0m Joined a new user 61, now active users: 40 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:14,969] WARNING:[0m User 60 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,075] INFO:[0m Joined a new user 62, now active users: 41 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,075] WARNING:[0m User 61 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,175] INFO:[0m Joined a new user 63, now active users: 42 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,176] WARNING:[0m User 62 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,176] INFO:[0m Removing 1 finished sessions, now active users: 41 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:15,281] INFO:[0m Joined a new user 64, now active users: 42 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,281] WARNING:[0m User 63 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,281] INFO:[0m Removing 1 finished sessions, now active users: 41 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:15,384] INFO:[0m Joined a new user 65, now active users: 42 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,389] WARNING:[0m User 64 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,389] INFO:[0m Removing 1 finished sessions, now active users: 41 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:15,495] INFO:[0m Joined a new user 66, now active users: 42 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,496] WARNING:[0m User 65 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,609] INFO:[0m Joined a new user 67, now active users: 43 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,610] WARNING:[0m User 66 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,610] INFO:[0m Removing 1 finished sessions, now active users: 42 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:15,713] INFO:[0m Joined a new user 68, now active users: 43 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,715] WARNING:[0m User 67 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,718] INFO:[0m Removing 2 finished sessions, now active users: 41 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:15,824] INFO:[0m Joined a new user 69, now active users: 42 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,824] WARNING:[0m User 68 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,929] INFO:[0m Joined a new user 70, now active users: 43 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:15,929] WARNING:[0m User 69 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:15,929] INFO:[0m Removing 1 finished sessions, now active users: 42 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:16,031] INFO:[0m Joined a new user 71, now active users: 43 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,031] WARNING:[0m User 70 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,031] INFO:[0m Removing 1 finished sessions, now active users: 42 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:16,144] INFO:[0m Joined a new user 72, now active users: 43 [3m(multi-round-qa.py:478:__main__)[0m
+[32;20m[2025-07-10 19:44:16,258] INFO:[0m Joined a new user 73, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,271] WARNING:[0m User 72 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,378] INFO:[0m Joined a new user 74, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,394] WARNING:[0m User 73 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,394] INFO:[0m Removing 2 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:16,506] INFO:[0m Joined a new user 75, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,507] WARNING:[0m User 74 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,613] INFO:[0m Joined a new user 76, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,613] WARNING:[0m User 75 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,733] INFO:[0m Joined a new user 77, now active users: 46 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,734] WARNING:[0m User 76 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,734] INFO:[0m Removing 1 finished sessions, now active users: 45 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:16,837] INFO:[0m Joined a new user 78, now active users: 46 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,837] WARNING:[0m User 77 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:16,837] INFO:[0m Removing 3 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:16,944] INFO:[0m Joined a new user 79, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:16,944] WARNING:[0m User 78 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,051] INFO:[0m Joined a new user 80, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,053] WARNING:[0m User 79 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,053] INFO:[0m Removing 1 finished sessions, now active users: 44 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,159] INFO:[0m Joined a new user 81, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,160] WARNING:[0m User 80 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,160] INFO:[0m Removing 2 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,267] INFO:[0m Joined a new user 82, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,268] WARNING:[0m User 81 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,268] INFO:[0m Removing 1 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,371] INFO:[0m Joined a new user 83, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,371] WARNING:[0m User 82 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,372] INFO:[0m Removing 1 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,475] INFO:[0m Joined a new user 84, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,476] WARNING:[0m User 83 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,476] INFO:[0m Removing 1 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,583] INFO:[0m Joined a new user 85, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,584] WARNING:[0m User 84 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,686] INFO:[0m Joined a new user 86, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,686] WARNING:[0m User 85 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,687] INFO:[0m Removing 2 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,797] INFO:[0m Joined a new user 87, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,803] WARNING:[0m User 86 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:17,806] INFO:[0m Removing 1 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:17,909] INFO:[0m Joined a new user 88, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:17,911] WARNING:[0m User 87 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,031] INFO:[0m Joined a new user 89, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,031] WARNING:[0m User 88 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,031] INFO:[0m Removing 2 finished sessions, now active users: 43 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:18,135] INFO:[0m Joined a new user 90, now active users: 44 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,135] WARNING:[0m User 89 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,240] INFO:[0m Joined a new user 91, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,240] WARNING:[0m User 90 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,240] INFO:[0m Removing 1 finished sessions, now active users: 44 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:18,357] INFO:[0m Joined a new user 92, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,357] WARNING:[0m User 91 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,465] INFO:[0m Joined a new user 93, now active users: 46 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,466] WARNING:[0m User 92 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,466] INFO:[0m Removing 2 finished sessions, now active users: 44 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:18,574] INFO:[0m Joined a new user 94, now active users: 45 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,589] WARNING:[0m User 93 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,700] INFO:[0m Joined a new user 95, now active users: 46 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,703] WARNING:[0m User 94 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,813] INFO:[0m Joined a new user 96, now active users: 47 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,825] WARNING:[0m User 95 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,941] INFO:[0m Joined a new user 97, now active users: 48 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:18,942] WARNING:[0m User 96 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:18,942] INFO:[0m Removing 1 finished sessions, now active users: 47 [3m(multi-round-qa.py:460:__main__)[0m
+[32;20m[2025-07-10 19:44:19,046] INFO:[0m Joined a new user 98, now active users: 48 [3m(multi-round-qa.py:478:__main__)[0m
+[33;20m[2025-07-10 19:44:19,054] WARNING:[0m User 97 has an unfinished request and unable to fit the QPS requirement. [3m(multi-round-qa.py:368:__main__)[0m
+[32;20m[2025-07-10 19:44:19,157] INFO:[0m Waiting for remaining tasks to finish [3m(utils.py:105:AsyncLoopWrapper)[0m
+[32;20m[2025-07-10 19:44:19,158] INFO:[0m Waiting for 51 tasks to finish [3m(utils.py:67:AsyncLoopWrapper)[0m
+[1m[2025-07-10 19:44:22,026] DEBUG:[0m Stopping the loop! [3m(utils.py:102:AsyncLoopWrapper)[0m
+[32;20m[2025-07-10 19:44:22,026] INFO:[0m Finished benchmarking, dumping summary to summary.csv [3m(multi-round-qa.py:758:__main__)[0m
+[32;20m[2025-07-10 19:44:22,121] INFO:[0m Calculating performance summary [3m(multi-round-qa.py:533:__main__)[0m
+已成功修补tiktoken加载过程，将使用本地文件
+
+
+==================== Performance summary ======================
+  [33mQPS: [32m10000.0000 reqs/s[0m
+
+  [33mProcessing speed: [32m16.6858 reqs/s[0m
+
+  [33mRequests on-the-fly: 0[0m
+
+  [33mInput tokens per second: [32m8074.2389 tokens/s[0m
+
+  [33mOutput tokens per second: [32m3172.5466 tokens/s[0m
+
+  [33mAverage generation throughput (per request): [32m140.6643 tokens/req/s[0m
+
+  [33mAverage TTFT: [32m0.0953s[0m
+
+Time range: 1752147849.0804818 - 1752147862.0256028 (12.95s)
+===============================================================
+
+

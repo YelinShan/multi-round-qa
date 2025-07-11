@@ -1,0 +1,43 @@
+已成功修补tiktoken加载过程，将使用本地文件
+
+
+==================== Performance summary ======================
+  [33mQPS: [32m5000.0000 reqs/s[0m
+
+  [33mProcessing speed: [32m19.5501 reqs/s[0m
+
+  [33mRequests on-the-fly: 177[0m
+
+  [33mInput tokens per second: [32m7324.4597 tokens/s[0m
+
+  [33mOutput tokens per second: [32m3523.2579 tokens/s[0m
+
+  [33mAverage generation throughput (per request): [32m100.8100 tokens/req/s[0m
+
+  [33mAverage TTFT: [32m0.7297s[0m
+
+Time range: 1751969074.7969692 - 1751969098.8377867 (24.04s)
+===============================================================
+
+
+
+
+==================== Performance summary ======================
+  [33mQPS: [32m5000.0000 reqs/s[0m
+
+  [33mProcessing speed: [32m19.5501 reqs/s[0m
+
+  [33mRequests on-the-fly: 177[0m
+
+  [33mInput tokens per second: [32m7324.4597 tokens/s[0m
+
+  [33mOutput tokens per second: [32m3523.2579 tokens/s[0m
+
+  [33mAverage generation throughput (per request): [32m100.8100 tokens/req/s[0m
+
+  [33mAverage TTFT: [32m0.7297s[0m
+
+Time range: 1751969074.7969692 - 1751969098.8377867 (24.04s)
+===============================================================
+
+
