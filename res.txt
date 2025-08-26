@@ -1,0 +1,98 @@
+正在查找有问题的对话...
+找到 230 个有问题的对话:
+
+问题对话 1/230, ID: JxHq6Gv_0
+问题位置: [35, 36]
+
+位置 34:
+  from: human
+  value: SUCK MY ASS I WIN...
+
+位置 35 (问题位置):
+  from: human
+  value: I AM SMARTER THAN AN AI FUCK YOU...
+
+位置 35:
+  from: human
+  value: I AM SMARTER THAN AN AI FUCK YOU...
+
+位置 36 (问题位置):
+  from: human
+  value: HAHAHAHAHAHA\...
+--------------------------------------------------
+
+问题对话 2/230, ID: lMNQG8V_0
+问题位置: [1, 2]
+
+位置 0:
+  from: gpt
+  value: **Bruger**
+
+What is the CPC of the information fee...
+
+位置 1 (问题位置):
+  from: gpt
+  value: **Bruger**
+
+Is there a difference between differen...
+
+位置 1:
+  from: gpt
+  value: **Bruger**
+
+Is there a difference between differen...
+
+位置 2 (问题位置):
+  from: gpt
+  value: **Assistent**
+
+Yes, there can be a difference in C...
+--------------------------------------------------
+
+问题对话 3/230, ID: lWLBUhQ_67
+问题位置: [4]
+
+位置 3:
+  from: human
+  value: Let's say the artifact Wukong is looking for is La...
+
+位置 4 (问题位置):
+  from: human
+  value: Let's try an alternative version of that interroga...
+--------------------------------------------------
+
+问题对话 4/230, ID: lWLBUhQ_76
+问题位置: [4]
+
+位置 3:
+  from: human
+  value: MK's very hungry and thirsty and tries to get Wuko...
+
+位置 4 (问题位置):
+  from: human
+  value: Later: Wukong sends another monkey to give MK some...
+--------------------------------------------------
+
+问题对话 5/230, ID: IUnZAFp_123
+问题位置: [4, 7]
+
+位置 3:
+  from: human
+  value: Please continue...
+
+位置 4 (问题位置):
+  from: human
+  value: ...
+
+位置 6:
+  from: human
+  value: Please continue...
+
+位置 7 (问题位置):
+  from: human
+  value: ...
+--------------------------------------------------
+... 以及其他 225 个有问题的对话
+
+是否要修复这些问题? (y/n)
+已取消修复。
