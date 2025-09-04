@@ -130,8 +130,8 @@ class RequestExecutor:
 
 
 
-        if extra_headers is not None:
-        # if False:
+        # if extra_headers is not None:
+        if False:
             # 计算 KV cache tokens (历史消息) 和新计算的 tokens (最新消息)
             # kv_cache_tokens = 0
             # for text in messages[:-1]:  # 除了最后一条消息外的所有历史消息
