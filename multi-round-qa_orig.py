@@ -116,7 +116,11 @@ class Response:
 
 class RequestExecutor:
     def __init__(self, base_url: str, api_key: str, model: str):
-        self.client = openai.AsyncOpenAI(api_key=api_key, base_url=base_url)
+        self.client = openai.AsyncOpenAI(
+            api_key=api_key, 
+            base_url=base_url,
+            timeout=300.0  # 增加到5分钟
+        )
         self.model = model
         self.loop = AsyncLoopWrapper.GetOrStartLoop()
         self.request_history = []
