@@ -25,7 +25,8 @@ fi
 # 基础路径与时间戳run目录
 BASE_LOG_DIR="/home/yshan/Programs/vllm-scheduling-optimized/benchmarks/multi-round-qa/benchmark_log"
 DATE_TIME="$(date +%Y_%m_%d_%H-%M)"
-RUN_DIR="$BASE_LOG_DIR/$DATE_TIME"
+LMFLAG_DIR=${LMFLAG:-lmcache_disabled}
+RUN_DIR="$BASE_LOG_DIR/$MODE/$LMFLAG_DIR/$DATE_TIME"
 mkdir -p "$RUN_DIR"
 
 VLLM_LOG="$RUN_DIR/run_vllm_server.log"
@@ -33,6 +34,9 @@ MRQ_LOG="$RUN_DIR/run_mrq.log"
 
 # 压测参数
 MODEL_DIR="/home/yshan/Downloads/models/Qwen-1_5b"
+
+NUM_USERS=50
+QPS=100
 
 # --------- 工具函数 ----------
 wait_for_vllm_ready() {
@@ -77,12 +81,16 @@ trap cleanup EXIT INT TERM
 
 # --------- 启动 vLLM ----------
 {
-  echo "===== START ====="
+  echo "==================== START ===================="
   echo "Date Time: $DATE_TIME"
   echo "Run Dir: $RUN_DIR"
+  echo 
   echo "SchedulerPolicy (MODE): $MODE"
   echo "LMCache Flag: ${LMFLAG:-<none>}"
-  echo "===== OUTPUT ====="
+  echo 
+  echo "NUM Of USERS: $NUM_USERS"
+  echo "QPS: $QPS"
+  echo "==================== OUTPUT ===================="
 } > "$MRQ_LOG"
 
 echo "▶️ 启动 vLLM 服务器..." | tee -a "$MRQ_LOG"
@@ -95,6 +103,7 @@ VLLM_SERVER_SCRIPT="/home/yshan/Programs/vllm-scheduling-optimized/run_vllm_serv
 VLLM_WRAPPER_PID=$!
 echo "vLLM wrapper pid: $VLLM_WRAPPER_PID" >> "$MRQ_LOG"
 
+
 # 等待服务就绪
 wait_for_vllm_ready
 
@@ -103,12 +112,12 @@ echo "🚀 开始运行 multi-round-qa 压测..." | tee -a "$MRQ_LOG"
 
 CMD=(
   python multi-round-qa_orig.py
-  --num-users 50
+  --num-users $NUM_USERS
   --shared-system-prompt 1
   --user-history-prompt 1
-  --answer-len 50000
+  --answer-len 5000000
   --num-rounds 10
-  --qps 100
+  --qps $QPS
   --model "$MODEL_DIR"
   --seed 12345
   --base-url http://localhost:8000/v1
@@ -117,15 +126,29 @@ CMD=(
 )
 
 {
-  echo "===== COMMAND ====="
+  echo "==================== COMMAND ===================="
   printf '%s \\\n' "${CMD[@]}"
   echo
-  echo "===== OUTPUT ====="
+  echo "==================== OUTPUT ===================="
 } >> "$MRQ_LOG"
 
 # 执行压测，输出同时写文件与控制台
 # （这里 tee -a $MRQ_LOG 方便你实时查看；若不需要可直接重定向到 >> "$MRQ_LOG"）
 "${CMD[@]}" 2>&1 | tee -a "$MRQ_LOG"
+
+
+{
+  echo "==================== PARAMS ===================="
+  echo "Date Time: $DATE_TIME"
+  echo "Run Dir: $RUN_DIR"
+  echo 
+  echo "SchedulerPolicy (MODE): $MODE"
+  echo "LMCache Flag: ${LMFLAG:-<none>}"
+  echo 
+  echo "NUM Of USERS: $NUM_USERS"
+  echo "QPS: $QPS"
+  echo "==================== OUTPUT ===================="
+} >> "$MRQ_LOG"
 
 # --------- 关闭 vLLM ----------
 stop_vllm

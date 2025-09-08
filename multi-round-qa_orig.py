@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Optional
 import argparse
 import asyncio
+import concurrent.futures
 import json
 import logging
 import time
@@ -198,7 +199,35 @@ class RequestExecutor:
         finish_callback: Callable[[Response], None]
         """
         messages = chat_history.get_messages_for_openai()
-        real_callback = lambda x: finish_callback(x.result())
+        def real_callback(future_result):
+            try:
+                result = future_result.result()
+                finish_callback(result)
+            except concurrent.futures.CancelledError:
+                # 任务被取消，创建一个模拟的失败响应
+                from openai.types.chat import ChatCompletion
+                from openai.types.chat.chat_completion import Choice
+                from openai.types.chat.chat_completion_message import ChatCompletionMessage
+                from openai.types.completion_usage import CompletionUsage
+                
+                # 创建一个表示取消的响应
+                cancelled_response = ChatCompletion(
+                    id="cancelled",
+                    choices=[Choice(
+                        finish_reason="cancelled",
+                        index=0,
+                        message=ChatCompletionMessage(content="[CANCELLED]", role="assistant")
+                    )],
+                    created=0,
+                    model="cancelled",
+                    object="chat.completion",
+                    usage=CompletionUsage(completion_tokens=0, prompt_tokens=0, total_tokens=0)
+                )
+                finish_callback(cancelled_response)
+            except Exception as e:
+                # 其他异常也要处理，避免回调失败
+                logger.error(f"Error in request callback: {e}")
+                # 可以选择创建一个错误响应或忽略
         self.STATS_TOTAL_SEND += 1
         future = asyncio.run_coroutine_threadsafe(
             self._async_launch_request(messages, max_tokens, extra_headers, extra_body),
