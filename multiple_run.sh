@@ -12,7 +12,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # 每种 case 执行次数（可用第1个参数覆盖）
-REPEAT="${1:-2}"
+REPEAT="${1:-30}"
 # 每次运行之间的间隔秒数（可用第2个参数覆盖）
 SLEEP_BETWEEN="${2:-0}"
 
@@ -22,11 +22,15 @@ CASES=(
   # "fcfs"
   # "fcfs lmcache_enabled"
   
-  "sjf_prompt_tokens"
-  # "sjf_prompt_tokens lmcache_enabled"
+  # "sjf_prompt_tokens"
+  "sjf_prompt_tokens lmcache_enabled"
   
-  "sjf_uncomputed_tokens_local"
-  # "sjf_uncomputed_tokens_global lmcache_enabled /tmp/my-log-dir"
+  # "sjf_uncomputed_tokens_local"
+  "sjf_uncomputed_tokens_local lmcache_enabled"
+
+  # "sjf_uncomputed_tokens_global lmcache_enabled"
+
+  # "sjf_cost_aware lmcache_enabled"
 )
 
 run_one_case() {

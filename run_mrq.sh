@@ -13,7 +13,7 @@ set -o pipefail
 MODE="${1:-}"
 LMFLAG="${2:-}"
 
-VALID_MODES=("fcfs" "sjf_prompt_tokens" "sjf_uncomputed_tokens_local" "sjf_uncomputed_tokens_global")
+VALID_MODES=("fcfs" "sjf_prompt_tokens" "sjf_uncomputed_tokens_local" "sjf_uncomputed_tokens_global" "sjf_cost_aware")
 if [[ -z "$MODE" ]]; then
   echo "❌ Missing MODE argument."
   echo "Usage: $0 <MODE> [lmcache_enabled]"
@@ -36,7 +36,8 @@ MRQ_LOG="$RUN_DIR/run_mrq.log"
 MODEL_DIR="/home/yshan/Downloads/models/Qwen-1_5b"
 
 NUM_USERS=50
-QPS=100
+QPS=70
+RUN_TIME=200
 
 # --------- 工具函数 ----------
 wait_for_vllm_ready() {
@@ -122,7 +123,7 @@ CMD=(
   --seed 12345
   --base-url http://localhost:8000/v1
   --sharegpt
-  --time 200
+  --time $RUN_TIME
 )
 
 {

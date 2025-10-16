@@ -1,16 +1,16 @@
 import re
+import sys
 
-# 日志文件路径
-log_file = (
-    "/home/yshan/Programs/vllm-scheduling-optimized/benchmarks/multi-round-qa/benchmark_log/sjf_prompt_tokens/lmcache_enabled/2025_09_08_16-04/run_vllm_server.log"
-)
+if len(sys.argv) < 2:
+    print("用法: python script.py <log_file>")
+    sys.exit(1)
 
-# 定义计数器
+log_file = sys.argv[1]
+
 positive_count = 0
 zero_count = 0
 negative_count = 0
 
-# 定义正则
 pattern = re.compile(r"need to load:\s*(-?\d+)")
 
 with open(log_file, "r", encoding="utf-8") as f:
